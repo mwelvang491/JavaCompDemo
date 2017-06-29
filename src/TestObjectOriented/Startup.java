@@ -12,6 +12,7 @@ package TestObjectOriented;
 public class Startup {
     
     public static void main(String[] args) {
+    //this is not finished. 
     Test test = new Test();
     test.prepareTest();
     test.addQuestionToTest("What Is Your Name?");
