@@ -15,12 +15,15 @@ public class Startup {
     
     public static void main(String[] args) {
     //Non-Object Oriented Way.
-    
-        System.out.println("Non-Object Oriented Way."+"\n");
+        
+      //scanners get user input from the console. sc the variable name for the scanner object. 
       Scanner sc = new Scanner(System.in);
       
-        System.out.println("What Would You Like To Say?");
-      String userInput = sc.nextLine();
+        System.out.println("What Would You Like To Say?"); 
+        
+        //get the input from the user
+        String userInput = sc.nextLine();
+        //output the input to the console. 
         System.out.println("Output: " + userInput);
     }
   
