@@ -13,10 +13,17 @@ public class Startup {
     
     public static void main(String[] args) {
     //this is not finished. 
+    InputStrategy input = new InputScanner("Enter: "); 
+        
     Test test = new Test();
-    test.prepareTest();
-    test.addQuestionToTest("What Is Your Name?");
     
+    test.addQuestionToTest("What Is Your Name?", "Name: ");
+    
+    test.prepareTest();
+    
+    test.takeTest( input );
+    
+    test.getAnswers();
     }
     
 }
