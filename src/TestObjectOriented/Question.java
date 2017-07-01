@@ -10,21 +10,33 @@ package TestObjectOriented;
  * @author Mitch W
  */
 class Question {
-    int questionNum;
-    String questionText;
-    String questionAnswer;
+    private int questionNum;
+    private String questionText;
+    private String appreviatedQuestionText;
+    private String userSubmittedAnswer;
     
-    public Question(int questionNum, String questionText) {
+    public Question(int questionNum, String questionText, String appreviatedQuestionText) {
       setQuestionNum(questionNum);
       setQuestionText(questionText);
+      setAppreviatedQuestionText(appreviatedQuestionText);
     }
 
-    public String getQuestionAnswer() {
-        return questionAnswer;
+    public String getAppreviatedQuestionText() {
+        return appreviatedQuestionText;
     }
 
-    public void setQuestionAnswer(String questionAnswer) {
-        this.questionAnswer = questionAnswer;
+    public void setAppreviatedQuestionText(String appreviatedQuestionText) {
+        this.appreviatedQuestionText = appreviatedQuestionText;
+    }
+
+    
+    
+    public String getUserSubmittedAnswer() {
+        return userSubmittedAnswer;
+    }
+
+    public void setUserSubmittedAnswer(String userSubmittedAnswer) {
+        this.userSubmittedAnswer = userSubmittedAnswer;
     }
     
     public int getQuestionNum() {
@@ -42,6 +54,12 @@ class Question {
     public void setQuestionText(String questionText) {
         this.questionText = questionText;
     }
+
+//    @Override
+//    public String toString() {
+//        return questionText;
+//    }
+    
     
     
     

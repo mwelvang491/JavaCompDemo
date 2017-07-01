@@ -18,37 +18,43 @@ public class Startup {
         //Give Users A Test Then Output Their Answers.
         Scanner sc = new Scanner(System.in);
         
-        ArrayList<String> questions = new ArrayList();
-            questions.add("What Is Your Favorite Color?");
-            questions.add("What Is Your Favorite Food?");
-        //    questions.add("What Is Your Favorite Movie?");
-        //    questions.add("What Is Your Favorite Tv Show?");
-        //    questions.add("What Is Your Favorite Video Game?");
+        ArrayList<String> test = new ArrayList();
+        //add questions to the test ArrayList. 
+           test.add("What Is Your Favorite Color?");
+           test.add("What Is Your Favorite Food?");
+           test.add("What Is Your Favorite Movie?");
+           test.add("What Is Your Favorite Tv Show?");
+           test.add("What Is Your Favorite Video Game?");
         
         ArrayList<String> answers = new ArrayList();
         
-        System.out.println(questions.get(0));
+        System.out.println(test.get(0));
         String input = sc.nextLine();
         answers.add(input);
         
-        System.out.println(questions.get(1));
+        System.out.println(test.get(1));
         input = sc.nextLine();
         answers.add(input);
-//        
-//        System.out.println(questions.get(2));
-//        input = sc.nextLine();
-//        answers.add(input);
-//        
-//        System.out.println(questions.get(3));
-//        input = sc.nextLine();
-//        answers.add(input);
-//        
-//        System.out.println(questions.get(4));
-//        input = sc.nextLine();
-//        answers.add(input);
+        
+        System.out.println(test.get(2));
+        input = sc.nextLine();
+        answers.add(input);
+        
+        System.out.println(test.get(3));
+        input = sc.nextLine();
+        answers.add(input);
+        
+        System.out.println(test.get(4));
+        input = sc.nextLine();
+        answers.add(input);
+        
+        System.out.println(test.get(5));
+        input = sc.nextLine();
+        answers.add(input);
         
         int questionNumber = 1;  
         System.out.println("");
+        //loop through and output all the Answers. 
         for(String answer : answers ){
             System.out.println("Question " + questionNumber + ": " + answer );
             questionNumber++;

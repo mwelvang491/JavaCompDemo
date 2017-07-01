@@ -13,24 +13,65 @@ import java.util.Map;
  * @author Mitch W
  */
 class Test {
-    private final  Map testMap = new HashMap();
+    private Map testMap = new HashMap();
     private static int questionNum;
+    private Player player = new Player();
     
     public void prepareTest(){
-    addQuestionToTest("What Is Your Favorite Movie?");
-    addQuestionToTest("What Is Your Favorite Tv Show?");
-    addQuestionToTest("What Is Your Favorite Video Game?");
+    addQuestionToTest("What Is Your Favorite Movie?",      "Favorite Movie: ");
+    addQuestionToTest("What Is Your Favorite Tv Show?",    "Favorite Tv Show: " );
+  //  addQuestionToTest("What Is Your Favorite Video Game?", "Favorite Video Game: ");
     }
 
-    public void addQuestionToTest(String questionText){
+    public void addQuestionToTest(String questionText, String abbreivatedQuestionText){
         questionNum++;
-        Question question = new Question(questionNum, questionText);
-        testMap.put(questionNum, questionText);
+        Question question = new Question(questionNum, questionText, abbreivatedQuestionText );
+        testMap.put(questionNum, question);
     }
     
-    public String outputQuestion(int key){
+    public Question getQuestion(int questionNumber){
         
        
-    return (String)testMap.get(key); }
+        return (Question)testMap.get(questionNumber); 
+    }
+
+    public void takeTest(InputStrategy input) {      
+     player.giveTest( getTestMap()  , input );
+    }
+
+    public void getAnswers(  ){
+        
+         player.getAnswers();
+     }
+    
+    
+    
+    
+    public Map getTestMap() {
+        return testMap;
+    }
+
+    public void setTestMap(Map testMap) {
+        this.testMap = testMap;
+    }
+    
+    public static int getQuestionNum() {
+        return questionNum;
+    }
+
+    public static void setQuestionNum(int questionNum) {
+        Test.questionNum = questionNum;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+    
+    
+    
     
 }

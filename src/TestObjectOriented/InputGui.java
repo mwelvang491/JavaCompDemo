@@ -4,30 +4,23 @@
  * and open the template in the editor.
  */
 package TestObjectOriented;
-
-
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Mitch W
  */
-public class InputScanner implements InputStrategy{
-
+public class InputGui implements InputStrategy {   
     private String userInput;
     private String prompt;
 
-    public InputScanner(String prompt) {
+    public InputGui(String prompt) {
        setPrompt(prompt);          
     }
     
     @Override
     public String askUserForInput() {
-        System.out.print( getPrompt() );
-        
-        Scanner sc = new Scanner(System.in);
-        setUserInput(sc.nextLine());
-   
+        setUserInput( JOptionPane.showInputDialog(null, getPrompt() ) );
         return getUserInput() ;
     }
 
@@ -50,9 +43,4 @@ public class InputScanner implements InputStrategy{
     public void setUserInput(String userInput)  {
          this.userInput = userInput;
     }
-
-
-    
-    
-    
 }

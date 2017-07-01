@@ -14,7 +14,7 @@ public class Startup {
    // Use Copier Class to Pass Input To Output Class.
    // Output with Output Class.
    
-  
+   
    
    // InputStrategy input = new InputConsole("Input: "); 
       InputStrategy input = new InputGui("Input: ");
